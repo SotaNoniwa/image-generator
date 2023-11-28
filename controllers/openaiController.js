@@ -1,0 +1,44 @@
+import OpenAI from 'openai';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+const generateImage = async (req, res) => {
+    console.log(req.body);
+    const { prompt } = req.body;
+
+    try {
+        // dall-e-3 model only supports "1024x1024" size
+        const response = await openai.images.generate({
+            model: "dall-e-3",
+            prompt: prompt,
+            n: 1,
+            size: "1024x1024"
+        });
+
+        const imageUrl = response.data[0].url;
+
+        res.status(200).json({
+            success: true,
+            data: imageUrl
+        });
+    } catch (error) {
+        if (error.response) {
+            console.log(error.response.status);
+            console.log(error.response.data);
+        } else {
+            console.log(error.message);
+        }
+
+        res.status(400).json({
+            success: false,
+            error: "The image could not be generated"
+        });
+    }
+}
+
+export { generateImage };
