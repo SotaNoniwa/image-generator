@@ -14,7 +14,7 @@ npm install
 
 3. Configure Environment Variables:
 - Create a .env file in the server directory.
-- Add your OpenAI API key to the .env file:
+- Add your OpenAI API key to the .env file: <br/>
 OPENAI_API_KEY=your_openai_api_key
 
 4. Run the Application:
