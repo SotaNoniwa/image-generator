@@ -6,7 +6,7 @@ Leveraging advanced AI models, this project offers a user-friendly interface for
 
 ## Getting Started
 1. Clone the Repository:
-git clone https://github.com/yourusername/ai-image-generator.git
+git clone https://github.com/SotaNoniwa/image-generator.git
 cd ai-image-generator
 
 2. Install Dependencies:
