@@ -5,8 +5,8 @@ The AI Image Generator is an innovative web application powered by the OpenAI AP
 Leveraging advanced AI models, this project offers a user-friendly interface for real-time image creation, allowing users to experiment with various prompts to influence the generated content.
 
 ## Getting Started
-1. Clone the Repository:
-git clone https://github.com/SotaNoniwa/image-generator.git <br/><br/>
+1. Clone the Repository: <br/>
+git clone https://github.com/SotaNoniwa/image-generator.git <br/>
 cd ai-image-generator
 
 2. Install Dependencies:
